@@ -7,6 +7,13 @@ import EmpAddForm from '../emp-add-form/emp-add-form';
 import './app.css';
 
 function App() {
+
+    const data = [
+        {name:'Alena R.', salary: 800, increase:true, id: 1},
+        {name:'Vadim Sh.', salary: 1000, increase:false, id: 2},
+        {name:'Dmitry G.', salary: 2000, increase:true, id: 3},
+    ];
+
     return(
         <div className="app">
             <AppInfo/>
@@ -16,7 +23,7 @@ function App() {
                 <AppFilter/>
             </div>
 
-            <EmpList/>
+            <EmpList data={data}/>
             <EmpAddForm/>
         </div>
     );
